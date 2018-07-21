@@ -25,13 +25,13 @@
   "module": "index.js",
   "typings": "index.d.ts",
   "peerDependencies": {
-    "@rxdi/core": "^0.0.185"
+    "@rxdi/core": "^0.0.207"
   },
   "dependencies": {
     "graphql-playground-html": "^1.6.0"
   },
   "devDependencies": {
-    "@rxdi/core": "^0.0.185",
+    "@rxdi/core": "^0.0.207",
     "@rxdi/hapi": "0.0.173",
     "@types/hapi": "^17.0.14",
     "@types/node": "^10.3.4",
