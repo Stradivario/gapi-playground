@@ -28,7 +28,7 @@
     "graphql-playground-html": "^1.6.0"
   },
   "devDependencies": {
-    "@rxdi/core": "^0.0.395",
+    "@rxdi/core": "^0.0.402",
     "@rxdi/hapi": "0.0.173",
     "@types/hapi": "^17.0.14",
     "@types/node": "^10.3.4",
