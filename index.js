@@ -6,6 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var PlaygroundModule_1;
 const core_1 = require("@rxdi/core");
 const plugins_1 = require("./plugins");
 const palyground_config_1 = require("./palyground.config");
@@ -32,4 +33,3 @@ PlaygroundModule = PlaygroundModule_1 = __decorate([
     })
 ], PlaygroundModule);
 exports.PlaygroundModule = PlaygroundModule;
-var PlaygroundModule_1;

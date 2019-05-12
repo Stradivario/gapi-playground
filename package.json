@@ -1,6 +1,6 @@
 {
   "name": "@gapi/playground",
-  "version": "1.6.24",
+  "version": "1.6.25",
   "repository": {
     "type": "git",
     "url": "https://github.com/Stradivario/gapi-playground"
@@ -25,13 +25,13 @@
   "module": "index.js",
   "typings": "index.d.ts",
   "dependencies": {
-    "graphql-playground-html": "^1.6.0"
+    "graphql-playground-html": "1.6.13"
   },
   "devDependencies": {
     "@rxdi/core": "0.2.22",
     "@rxdi/hapi": "0.0.173",
     "@types/hapi": "^17.0.14",
     "@types/node": "^10.3.4",
-    "typescript": "3.0.1"
+    "typescript": "^3.5.0-rc"
   }
 }
