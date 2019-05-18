@@ -1,33 +1,29 @@
 import { renderPlaygroundPage } from 'graphql-playground-html'
 import { HAPI_SERVER } from '@rxdi/hapi';
-import { Plugin, Inject, OnInit } from '@rxdi/core';
+import { Plugin, Inject } from '@rxdi/core';
 import { PLAYGROUND_CONFIG, PlaygroundConfig } from '../palyground.config';
-import { Server } from 'hapi';
+import { Server, Request, ResponseToolkit } from 'hapi';
 
 @Plugin()
-export class GraphiQLPlaygroundPlugin implements OnInit {
-    middlewareOptions: PlaygroundConfig;
+export class GraphiQLPlaygroundPlugin {
+
     constructor(
         @Inject(HAPI_SERVER) private server: Server,
         @Inject(PLAYGROUND_CONFIG) private config: PlaygroundConfig
     ) { }
 
-    OnInit() {
-        this.middlewareOptions = this.config;
-    }
-
-    async register(server, options: any) {
+    async register() {
         if (this.config.graphiqlPlayground) {
             this.server.route({
                 method: 'GET',
-                path: this.middlewareOptions.path,
+                path: this.config.path,
                 handler: this.handler.bind(this)
             });
         }
     }
 
-    async handler(request, h) {
-        return h.response(renderPlaygroundPage(this.middlewareOptions)).type('text/html');
+    async handler(request: Request, h: ResponseToolkit) {
+        return h.response(renderPlaygroundPage(this.config)).type('text/html');
     }
 
 }

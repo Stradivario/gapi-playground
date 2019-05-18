@@ -30,15 +30,12 @@ let GraphiQLPlaygroundPlugin = class GraphiQLPlaygroundPlugin {
         this.server = server;
         this.config = config;
     }
-    OnInit() {
-        this.middlewareOptions = this.config;
-    }
-    register(server, options) {
+    register() {
         return __awaiter(this, void 0, void 0, function* () {
             if (this.config.graphiqlPlayground) {
                 this.server.route({
                     method: 'GET',
-                    path: this.middlewareOptions.path,
+                    path: this.config.path,
                     handler: this.handler.bind(this)
                 });
             }
@@ -46,7 +43,7 @@ let GraphiQLPlaygroundPlugin = class GraphiQLPlaygroundPlugin {
     }
     handler(request, h) {
         return __awaiter(this, void 0, void 0, function* () {
-            return h.response(graphql_playground_html_1.renderPlaygroundPage(this.middlewareOptions)).type('text/html');
+            return h.response(graphql_playground_html_1.renderPlaygroundPage(this.config)).type('text/html');
         });
     }
 };

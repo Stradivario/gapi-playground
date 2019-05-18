@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@rxdi/core": "0.2.22",
-    "@rxdi/hapi": "0.0.173",
+    "@rxdi/hapi": "0.2.22",
     "@types/hapi": "^17.0.14",
     "@types/node": "^10.3.4",
     "typescript": "^3.5.0-rc"
